@@ -5,42 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>我的导航</title>
+    <link rel="stylesheet" href="./style.css">
 </head>
 <body>
     <header></header>
     <main>
-        <div>
-            <kbd>q</kbd>
-            <kbd>w</kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-        </div>
-        <div>
-            <kbd>e</kbd>
-            <kbd>r</kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-        </div>
-        <div>
-            <kbd>z</kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-            <kbd></kbd>
-        </div>
+        <div class="wrapper" id="zhangsan"></div>
     </main>
     <footer></footer>
     <script>
@@ -49,6 +19,44 @@
             1: ['a','s','d','f','g','h','j','k','l'],
             2: ['z','x','c','v','b','n','m'],
             length: 3
+        }
+
+        var hash = {
+            q: 'qq.com',
+            w: 'weibo.com',
+            e: 'ele.me',
+            r: 'renren.com',
+            t: 'tianya.com',
+            y: 'youku.com',
+            u: 'uc.com',
+            i: 'iqiyi.com',
+            o: 'opera.com',
+            p: undefined,
+            a: 'alibaba.com',
+            s: 'souhu.com',
+            d: 'douyu.com',
+            f: undefined,
+            g: undefined,
+            h: 'huya.com',
+            z: 'zhihu.com',
+            m: 'https://www.mcdonalds.com.cn',
+        }
+
+        
+
+        index = 0
+        while (index < keys['length']){     //0 1 2
+            div1 = document.createElement('div')
+            zhangsan.appendChild(div1)
+            row = keys[index]               //第一个数组 第二个数组 第三个数组
+            index2 = 0
+            while (index2 < row['length']){ //0~9 0~8 0~6
+                kbd1 = document.createElement('kbd')
+                kbd1.textContent = row[index2]
+                div1.appendChild(kbd1)
+                index2 = index2 +1 
+            }
+            index = index+1
         }
     </script>
 </body>
