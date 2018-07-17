@@ -23,7 +23,7 @@ main{
     display: inline-block;
 }
 
-#zhangsan> div:nth-child(2){
+#zhangsan > div:nth-child(2){
     margin-left: 1em;
 }
 
