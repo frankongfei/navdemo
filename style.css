@@ -21,6 +21,7 @@ main{
 
 #zhangsan{
     display: inline-block;
+    border: 1px solid blue;
 }
 
 #zhangsan > div:nth-child(2){
