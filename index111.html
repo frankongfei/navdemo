@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-Hans">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>孔霏贼帅</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+<body>
+    <header></header>
+    <main>
+        <div class="wrapper" id="zhangsan">
+
+        </div>
+    </main>
+    <footer></footer>
+    <script>
+    keys = {
+        0 : ['q','w','e','r','t','y','u','i','o','p'],
+        1 : ['a','s','d','f','g','h','j','k','l'],
+        2 : ['z','x','c','v','b','n','m'],
+        length : 3
+    }
+
+    hash = {
+        q: 'qq.com',
+        w: 'weibo.com',
+        e: 'ele.me',
+        r: 'renren.com',
+        t: 'tianya.com',
+        y: 'youku.com',
+        u: 'uc.com',
+        i: 'iqiyi.com',
+        o: 'opera.com',
+        p: undefined,
+        a: 'alibaba.com',
+        s: 'souhu.com',
+        d: 'douyu.com',
+        f: undefined,
+        g: undefined,
+        h: 'huya.com',
+        z: 'zhihu.com',
+        m: 'www.mcdonalds.com.cn',
+    }
+
+        index = 0
+        while (index < keys['length']){
+            div1 = document.createElement('div')
+            zhangsan.appendChild(div1)
+            row = keys[index]
+            index2 = 0
+            while (index2 < row.length){
+                kbd1 = document.createElement('kbd')
+                kbd1.textContent = row[index2]
+                button1 = document.createElement('button')
+                button1.textContent = '编辑'
+                kbd1.appendChild(button1)
+                button1.id = row[index2]
+                button1.onclick = function(sdafsad){
+                    key = sdafsad.target.id
+                    x = prompt('你瞅啥')
+                    hash[key] = x
+                }
+                div1.appendChild(kbd1)
+                index2 = index2 + 1
+            }
+            index = index + 1
+        }
+    
+    </script>
+</body>
+</html>
