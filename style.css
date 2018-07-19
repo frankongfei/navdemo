@@ -16,6 +16,15 @@ kbd{
     position: relative;
 }
 
+main > kbd{
+    height: 100px;
+    width: 130px;
+    background: linear-gradient(to bottom, #252626 0%,#101010 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    border: 1px solid #373737;
+    color: #B9B9B9;
+    border-radius: 14px;
+}
+
 kbd > button{
     position: absolute;
     right: 0;
