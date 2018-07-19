@@ -14,14 +14,14 @@
     </main>
     <footer></footer>
     <script>
-        var keys = {
+        keys = {
             0: ['q','w','e','r','t','y','u','i','o','p'],
             1: ['a','s','d','f','g','h','j','k','l'],
             2: ['z','x','c','v','b','n','m'],
             length: 3
         }
 
-        var hash = {
+        hash = {
             q: 'qq.com',
             w: 'weibo.com',
             e: 'ele.me',
@@ -41,9 +41,11 @@
             z: 'zhihu.com',
             m: 'www.mcdonalds.com.cn',
         }
-
-        
-
+        //取出LocalStorage中的zzz对应的hash
+        hashInLocalStorage = JSON.parse(localStorage.getItem('zzz') || '')
+        if (hashInLocalStorage){
+            hash = hashInLocalStorage
+        }
         index = 0
         while (index < keys['length']){     //0 1 2
             div1 = document.createElement('div')
@@ -59,7 +61,8 @@
                 button1.onclick = function(sfdgsfg){
                     key = sfdgsfg.target.id
                     x = prompt('在这里输入你要看啥')
-                    hash[key] = x
+                    hash[key] = x     //hash变更
+                    localStorage.setItem('zzz',JSON.stringify(hash))
                 }
                 kbd1.appendChild(button1)
                 div1.appendChild(kbd1)
