@@ -16,13 +16,25 @@ kbd{
     position: relative;
 }
 
-main > kbd{
+.key{
     height: 100px;
     width: 130px;
     background: linear-gradient(to bottom, #252626 0%,#101010 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     border: 1px solid #373737;
     color: #B9B9B9;
-    border-radius: 14px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px #1A1B1C, 0 0 0 2px #1F2020, 0 3px 0 2px #080808;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.row{
+    margin: 15px;
+}
+
+.row .key{
+    margin: 0 5px;
 }
 
 /*#heart {
@@ -87,7 +99,7 @@ main{
 }
 
 #zhangsan > div:nth-child(2){
-    margin-left: 0.6em;
+    margin-left: -25px;
 }
 
 #zhangsan > div:nth-child(3){
