@@ -10,7 +10,6 @@
 <body>
     <header></header>
     <main>
-        <kbd id="heart">A</kbd>
         <div class="wrapper" id="zhangsan"></div>
     </main>
     <footer></footer>
@@ -49,24 +48,26 @@
         }
         index = 0
         while (index < keys['length']){     //0 1 2
-            div1 = document.createElement('div')
-            zhangsan.appendChild(div1)
+            div = document.createElement('div')
+            div.className = 'row'
+            zhangsan.appendChild(div)
             row = keys[index]               //第一个数组 第二个数组 第三个数组
             index2 = 0
             while (index2 < row['length']){ //0~9 0~8 0~6
-                kbd1 = document.createElement('kbd')
-                kbd1.textContent = row[index2]
-                button1 = document.createElement('button')
-                button1.textContent = '编辑'
-                button1.id = row[index2]
-                button1.onclick = function(sfdgsfg){
+                kbd = document.createElement('kbd')
+                kbd.textContent = row[index2]
+                kbd.className = 'key'
+                button = document.createElement('button')
+                button.textContent = '编辑'
+                button.id = row[index2]
+                button.onclick = function(sfdgsfg){
                     key = sfdgsfg.target.id
                     x = prompt('在这里输入你要看啥')
                     hash[key] = x     //hash变更
                     localStorage.setItem('zzz',JSON.stringify(hash))
                 }
-                kbd1.appendChild(button1)
-                div1.appendChild(kbd1)
+                kbd.appendChild(button)
+                div.appendChild(kbd)
                 index2 = index2 +1 
             }
             index = index+1
