@@ -93,6 +93,9 @@ kbd:hover > button{
 
 main{
     text-align: center;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 #zhangsan{
