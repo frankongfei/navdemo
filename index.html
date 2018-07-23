@@ -25,11 +25,6 @@
             q: 'qq.com',
             w: 'weibo.com',
             e: 'ele.me',
-            r: 'renren.com',
-            t: 'tianya.com',
-            y: 'youku.com',
-            u: 'uc.com',
-            i: 'iqiyi.com',
             o: 'opera.com',
             p: undefined,
             a: 'alibaba.com',
@@ -42,6 +37,7 @@
             m: 'www.mcdonalds.com.cn',
         }
         //取出LocalStorage中的zzz对应的hash
+        //var hashInLocalStorage = getFromLocalStorage('zzz') 
         hashInLocalStorage = JSON.parse(localStorage.getItem('zzz') || 'null')
         if (hashInLocalStorage){
             hash = hashInLocalStorage
@@ -55,35 +51,49 @@
             index2 = 0
             while (index2 < row['length']){ //0~9 0~8 0~6
                 kbd = document.createElement('kbd')
-                kbd.textContent = row[index2]
+                span = document.createElement('span')
+                span.textContent = row[index2]
+                span.className = 'text'
                 kbd.className = 'key'
                 button = document.createElement('button')
                 button.textContent = '编辑'
                 button.id = row[index2]
                 img = document.createElement('img')
+                if(hash[row[index2]]){
+                    img.src = 'http://' + hash[row[index2]] + '/favicon.ico'
+                }
+                
                 button.onclick = function(sfdgsfg){
                     key = sfdgsfg.target.id
                     x = prompt('在这里输入你要看啥')
                     hash[key] = x     //hash变更
-                    localStorage.setItem('zzz',JSON.stringify(hash))
+                    localStorage.setItem('zzz',JSON.stringify(hash));
                 }
                 kbd.appendChild(button)
                 kbd.appendChild(img)
+                kbd.appendChild(span)
                 div.appendChild(kbd)
                 index2 = index2 +1 
             }
             index = index+1
         }
-
-
         document.onkeypress = function(sfdgsfg){
             //console.log('我发现你输入了一个键')
             //console.log('你按键的时候按了')
-            key = sfdgsfg['key']      //q w e r ....
-            website = hash[key]
+            key = sfdgsfg['key']    ;  //q w e r ....
+            website = hash[key];
             //location.href = 'http://' + website
-            window.open('http://' + website, '_blank')
-        }
+            window.open('http://' + website, '_blank');
+        };
+        /*function listenToUser(hash){
+		document.onkeypress = function(xzkjcnxlkcjlk){
+				var key = xzkjcnxlkcjlk['key'] // q w e
+				var website = hash[key]
+				//location.href = 'http://'+website
+				window.open('http://'+website, '_blank')
+			}
+		}*/
+
     </script>
 </body>
 </html>
