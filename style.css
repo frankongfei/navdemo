@@ -17,8 +17,8 @@ kbd{
 }
 
 .key{
-    height: 80px;
-    width: 104px;
+    height: 60px;
+    width: 78px;
     background: linear-gradient(to bottom, #252626 0%,#101010 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
     border: 1px solid #373737;
     color: #B9B9B9;
@@ -93,7 +93,8 @@ kbd:hover > button{
 
 body{
     height: 100vh;
-    background: #CAA1B1 url(./image/background4-min.jpg) no-repeat center center;
+    background-size: cover;
+    background: grey url(./image/background4-min.jpg) no-repeat center center;
 }
 
 main{
@@ -106,13 +107,15 @@ main{
 
 #zhangsan{
     display: inline-block;
+    background: rgba(255,255,255,0.2);
+    border-radius: 15px;
 }
 
 #zhangsan > div:nth-child(2){
-    margin-left: -35px;
+    margin-left: -25px;
 }
 
 #zhangsan > div:nth-child(3){
-    margin-left: -170px;
+    margin-left: -130px;
 }
 
