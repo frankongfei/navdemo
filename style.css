@@ -91,11 +91,16 @@ kbd:hover > button{
     display: inline-block
 }
 
+body{
+    height: 100vh;
+}
+
 main{
     text-align: center;
-    display: inline-flex;
+    display: flex;
     align-items: center;
     justify-content: center;
+    height: 100vh;
 }
 
 #zhangsan{
