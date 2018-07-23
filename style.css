@@ -32,11 +32,11 @@ kbd{
 }
 
 .row{
-    margin: 20px;
+    margin: 30px;
 }
 
 .row .key{
-    margin: 0 5px;
+    margin: 0 7px;
 }
 
 /*#heart {
@@ -93,6 +93,7 @@ kbd:hover > button{
 
 body{
     height: 100vh;
+    background: #CAA1B1 url(./image/background4-min.jpg) no-repeat center center;
 }
 
 main{
@@ -105,7 +106,6 @@ main{
 
 #zhangsan{
     display: inline-block;
-    border: 1px solid blue;
 }
 
 #zhangsan > div:nth-child(2){
