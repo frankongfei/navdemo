@@ -60,6 +60,7 @@
                 button = document.createElement('button')
                 button.textContent = '编辑'
                 button.id = row[index2]
+                img = document.createElement('img')
                 button.onclick = function(sfdgsfg){
                     key = sfdgsfg.target.id
                     x = prompt('在这里输入你要看啥')
@@ -67,6 +68,7 @@
                     localStorage.setItem('zzz',JSON.stringify(hash))
                 }
                 kbd.appendChild(button)
+                kbd.appendChild(img)
                 div.appendChild(kbd)
                 index2 = index2 +1 
             }
