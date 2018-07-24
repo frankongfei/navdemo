@@ -31,7 +31,7 @@ kbd{
 
 .key .text {
     position: absolute;
-    left: 8px;
+    left: 10px;
     top: 2px;
 }
 
@@ -126,5 +126,8 @@ main{
 .key img{
     width: 20px;
     height: 20px;
+    position: absolute;
+    left: 8px;
+    bottom: 4px;
 }
 
