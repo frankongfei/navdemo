@@ -25,6 +25,7 @@
             q: 'qq.com',
             w: 'weibo.com',
             e: 'ele.me',
+            t: 'www.iciba.com',
             o: 'opera.com',
             p: undefined,
             a: 'alibaba.com',
@@ -59,9 +60,16 @@
                 button.textContent = '编辑'
                 button.id = row[index2]
                 img = document.createElement('img')
-                //if(hash[row[index2]]){
+                if(hash[row[index2]]){
                     img.src = 'http://' + hash[row[index2]] + '/favicon.ico'
-                //}
+                }else{
+                    img.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
+                }
+
+                img.onerror = function(xxx){
+                    console.log('没想到吧下载失败了')
+                    xxx.target.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
+                }
                 
                 button.onclick = function(sfdgsfg){
                     key = sfdgsfg.target.id
