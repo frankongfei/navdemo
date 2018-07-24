@@ -72,9 +72,18 @@
                 }
                 
                 button.onclick = function(sfdgsfg){
-                    key = sfdgsfg.target.id
+                    button2 = sfdgsfg['target']
+                    img2 = button2.previousSibling
+                    key = button2['id']
+                    
                     x = prompt('在这里输入你要看啥')
                     hash[key] = x     //hash变更
+                    img2.src = 'http://' + x + '/favicon.ico'
+
+                    img2.onerror = function(xxx){
+                    //console.log('没想到吧下载失败了')
+                    xxx.target.src = '//i.loli.net/2017/11/10/5a05afbc5e183.png'
+                }
                     localStorage.setItem('zzz',JSON.stringify(hash));
                 }
                 kbd.appendChild(button)
