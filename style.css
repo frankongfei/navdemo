@@ -3,6 +3,14 @@
     padding: 0;
 }
 
+html { 
+    background: url(./image/background10.png) no-repeat center center fixed; 
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    }
+
 a{
     text-decoration: none;
 }
@@ -95,11 +103,11 @@ kbd:hover > button{
     display: inline-block
 }
 
-body{
+/*body{
     height: 100vh;
     background-size: cover;
-    background: grey url(./image/background2-min.jpg) no-repeat center center;
-}
+    background: grey url(./image/background10.png) no-repeat center center;
+}*/
 
 main{
     text-align: center;
